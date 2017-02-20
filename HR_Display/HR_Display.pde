@@ -37,12 +37,13 @@ void serialEvent (Serial myPort) {
     else {
       stroke(0xff, 0, 0); //Set stroke to red ( R, G, B)
       inByte = float(inString); 
-      print(inByte+"\n");
+      //print(inByte+"\n");
      }
      
      //Map and draw the line for new data point
      //inByte = map(inByte, 0, 1023, 0, height);
      height_new = height - inByte; 
+     print(height_new+"\n");
      line(xPos - 1, height_old, xPos, height_new);
      height_old = height_new;
     
